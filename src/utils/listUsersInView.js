@@ -1,3 +1,5 @@
+import { calculateDistance } from "./findDistance";
+
 export default function listUsersInView(users, positionX, positionY, screenWidth, screenHeight) {
   const usersInView = [];
   const avatarHeight = 125;
@@ -8,6 +10,7 @@ export default function listUsersInView(users, positionX, positionY, screenWidth
     if (users.hasOwnProperty(userId)) {
       const user = users[userId];
       const { x, y } = user;
+      const distance = calculateDistance(x,y, positionX, positionY).toFixed(2);
 
       // Calculate the bounds of the user's avatar
       const minX = x - avatarWidth / 2;
@@ -23,7 +26,7 @@ export default function listUsersInView(users, positionX, positionY, screenWidth
         maxY >= positionY - screenHeight / 2;
 
       if (isInView) {
-        usersInView.push(userId);
+        usersInView.push({...users[userId], distance});
       }
     }
   }

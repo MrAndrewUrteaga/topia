@@ -41,6 +41,6 @@ For each peer avatar that appears in the viewport, add the ID of that user to th
 
 Please submit this completed project to a new github repo. We can coordinate our own use and download of the completed code when you let us know you’re done!
 
-To run this repository, run: `npm start` from the project directory at your terminal and test your progress at `http://localhost:3000/`. Please ensure `node` and `npm` are installed on your computer
+To run this repository, run: `npm i --force` then `npm start` from the project directory at your terminal and test your progress at `http://localhost:3000/`. Please ensure `node` and `npm` are installed on your computer
 
 ##### Happy Coding!

@@ -1,0 +1,1 @@
+export const filterOutNonNumbers = (inputString: string): string =>  inputString.replace(/\D/g, '');
